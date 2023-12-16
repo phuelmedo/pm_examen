@@ -1,0 +1,21 @@
+.error {
+    --border-color: red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+
+  .error ion-input {
+    --border-color: red;
+    --border-width: 2px;
+    --border-style: solid;
+  }
+  
+  .error ion-label {
+    color: red;
+  }

@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/home">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+
+      <ion-title size="large">Registro</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <form #registroForm="ngForm" (ngSubmit)="register(registroForm)">
+      <ion-card-content>
+        
+        <ion-item [class.error]="nombreField.invalid && (nombreField.dirty || nombreField.touched || submitted)">
+          <ion-label position="stacked">Nombre</ion-label>
+          <ion-input name="nombre" ngModel #nombreField="ngModel" required placeholder="Ingresa tu nombre"></ion-input>
+        </ion-item>
+
+        <ion-item [class.error]="apellidoField.invalid && (apellidoField.dirty || apellidoField.touched || submitted)">
+          <ion-label position="stacked">Apellido</ion-label>
+          <ion-input name="apellido" ngModel #apellidoField="ngModel" required placeholder="Ingresa tu apellido"></ion-input>
+        </ion-item>
+
+        <ion-item [class.error]="usuarioRegField.invalid && (usuarioRegField.dirty || usuarioRegField.touched || submitted)">
+          <ion-label position="stacked">Usuario</ion-label>
+          <ion-input name="usuario" ngModel #usuarioRegField="ngModel" required placeholder="Ingresa tu usuario"></ion-input>
+        </ion-item>
+
+        <ion-item [class.error]="passwordRegField.invalid && (passwordRegField.dirty || passwordRegField.touched || submitted)">
+          <ion-label position="stacked">Contraseña</ion-label>
+          <ion-input name="password" ngModel #passwordRegField="ngModel" type="password" required placeholder="Ingresa tu contraseña"></ion-input>
+        </ion-item>
+
+        <ion-button type="submit" expand="full">Registrarse</ion-button>
+        
+      </ion-card-content>
+    </form>
+  </ion-card>
+</ion-content>
