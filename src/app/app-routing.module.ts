@@ -23,6 +23,18 @@ const routes: Routes = [
     path: 'logeado',
     loadChildren: () => import('./logeado/logeado.module').then( m => m.LogeadoPageModule)
   },
+  {
+    path: 'map',
+    loadChildren: () => import('./components/map/map.module').then( m => m.MapModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
+  },
+  {
+    path: 'scan',
+    loadChildren: () => import('./scan/scan.module').then( m => m.ScanPageModule)
+  }
 ];
 
 @NgModule({

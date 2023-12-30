@@ -18,30 +18,25 @@
   </ion-header>
 
   <ion-card>
-    <form #registroForm="ngForm" (ngSubmit)="register(registroForm)">
+    <form #registroForm="ngForm" (ngSubmit)="registrar()">
       <ion-card-content>
         
-        <ion-item [class.error]="nombreField.invalid && (nombreField.dirty || nombreField.touched || submitted)">
-          <ion-label position="stacked">Nombre</ion-label>
-          <ion-input name="nombre" ngModel #nombreField="ngModel" required placeholder="Ingresa tu nombre"></ion-input>
+        <ion-item>
+          <ion-label position="stacked">Email</ion-label>
+          <ion-input type="text" [(ngModel)]="username" name="username"></ion-input>
         </ion-item>
 
-        <ion-item [class.error]="apellidoField.invalid && (apellidoField.dirty || apellidoField.touched || submitted)">
-          <ion-label position="stacked">Apellido</ion-label>
-          <ion-input name="apellido" ngModel #apellidoField="ngModel" required placeholder="Ingresa tu apellido"></ion-input>
-        </ion-item>
-
-        <ion-item [class.error]="usuarioRegField.invalid && (usuarioRegField.dirty || usuarioRegField.touched || submitted)">
-          <ion-label position="stacked">Usuario</ion-label>
-          <ion-input name="usuario" ngModel #usuarioRegField="ngModel" required placeholder="Ingresa tu usuario"></ion-input>
-        </ion-item>
-
-        <ion-item [class.error]="passwordRegField.invalid && (passwordRegField.dirty || passwordRegField.touched || submitted)">
+        <ion-item>
           <ion-label position="stacked">Contraseña</ion-label>
-          <ion-input name="password" ngModel #passwordRegField="ngModel" type="password" required placeholder="Ingresa tu contraseña"></ion-input>
+          <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
         </ion-item>
 
-        <ion-button type="submit" expand="full">Registrarse</ion-button>
+        <ion-item>
+          <ion-label position="stacked">Confirmar contraseña</ion-label>
+          <ion-input type="password" [(ngModel)]="cpassword" name="cpassword"></ion-input>
+        </ion-item>
+
+        <ion-button expand="full" type="submit">Registrarse</ion-button>
         
       </ion-card-content>
     </form>

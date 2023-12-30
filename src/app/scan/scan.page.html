@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/logeado">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Scan</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="full"
+    fill="outline"
+    size="large"
+    shape="round"
+    (click)="scan()"
+    class="ion-text-center"
+  >ESCANEAR CODIGO</ion-button>
+</ion-content>

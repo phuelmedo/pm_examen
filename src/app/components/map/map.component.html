@@ -1,0 +1,17 @@
+
+<ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-button routerLink="/logeado">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title>Mapa</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <div id="map" style="height: 100%;"></div>
+    <div *ngIf="marker" class="marker"></div>
+  </ion-content>
+  
