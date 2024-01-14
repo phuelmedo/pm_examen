@@ -17,6 +17,7 @@ import { InAppBrowser } from '@ionic-native/in-app-browser/ngx'
 import { Storage } from '@ionic/storage'
 
 import { DatalocalService } from 'src/app/services/datalocal.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -27,7 +28,8 @@ import { DatalocalService } from 'src/app/services/datalocal.service';
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     FormsModule,
-    MapModule],
+    MapModule,
+    HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy},     
     BarcodeScanner,
     Storage,

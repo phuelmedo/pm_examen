@@ -29,11 +29,12 @@
     "@ionic/angular": "^7.0.0",
     "@ionic/storage": "^4.0.0",
     "@types/mapbox-gl": "^2.7.19",
+    "cordova-android": "12.0.1",
     "firebase": "^9.23.0",
     "ionicons": "^7.0.0",
     "mapbox-gl": "^3.0.1",
     "phonegap-plugin-barcodescanner": "^8.1.0",
-    "rxjs": "~7.8.0",
+    "rxjs": "^7.8.1",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"
   },
@@ -64,7 +65,21 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "ts-node": "^8.3.0",
-    "typescript": "~5.2.2"
+    "typescript": "~5.2.2",
+    "cordova-plugin-statusbar": "2.4.2",
+    "cordova-plugin-device": "2.0.2",
+    "cordova-plugin-splashscreen": "5.0.2",
+    "cordova-plugin-ionic-webview": "^5.0.0",
+    "cordova-plugin-ionic-keyboard": "^2.0.5"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-keyboard": {}
+    }
+  }
 }
