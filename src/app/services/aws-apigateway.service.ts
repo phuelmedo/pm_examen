@@ -20,12 +20,6 @@ export class AwsApigatewayService {
 
   getMovimiento(): Observable<any> {
     return this.httpClient.get(this.url)
-  }
-
-  postEnvio(nombre:string, direccion:string, idCliente:string, idProducto:string){
-    var body = {nombre: nombre, direccion: direccion, idCliente: idCliente, idProducto: idProducto}
-    console.log(nombre, direccion, idCliente, idProducto)
-    console.log(body)
-    return this.httpClient.post("https://3mm6p6ank1.execute-api.eu-north-1.amazonaws.com/deployapi/envio", body)
+    
   }
 }
