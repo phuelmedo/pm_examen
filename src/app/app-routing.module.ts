@@ -36,16 +36,12 @@ const routes: Routes = [
     loadChildren: () => import('./scan/scan.module').then( m => m.ScanPageModule)
   },
   {
-    path: 'producto',
-    loadChildren: () => import('./producto/producto.module').then( m => m.ProductoPageModule)
+    path: 'movimientos',
+    loadChildren: () => import('./movimientos/movimientos.module').then( m => m.MovimientosPageModule)
   },
   {
-    path: 'envio',
-    loadChildren: () => import('./envio/envio.module').then( m => m.EnvioPageModule)
-  },
-  {
-    path: 'cliente',
-    loadChildren: () => import('./cliente/cliente.module').then( m => m.ClientePageModule)
+    path: 'saldos',
+    loadChildren: () => import('./saldos/saldos.module').then( m => m.SaldosPageModule)
   }
 ];
 

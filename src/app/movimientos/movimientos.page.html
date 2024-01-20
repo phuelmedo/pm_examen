@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/logeado">
+        <ion-icon name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Movimientos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Movimientos</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <form #movimientoForm="ngForm">
+      <ion-card-content>
+        
+        <ion-item>
+          <ion-label position="stacked">Acción</ion-label>
+          <ion-select [(ngModel)]="accion" name="accion">
+            <ion-select-option value="abono">Abono</ion-select-option>
+            <ion-select-option value="retiro">Retiro</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="stacked">Monto</ion-label>
+          <ion-input type="number" [(ngModel)]="valor" name="valor"></ion-input>
+        </ion-item>
+  
+        <ion-button (click)="postMovimiento(movimientoForm)" expand="full">Crear movimiento</ion-button>
+        
+      </ion-card-content>
+    </form>
+  </ion-card>
+  
+
+</ion-content>

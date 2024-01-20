@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EnvioPageRoutingModule } from './envio-routing.module';
+import { MovimientosPageRoutingModule } from './movimientos-routing.module';
 
-import { EnvioPage } from './envio.page';
+import { MovimientosPage } from './movimientos.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EnvioPageRoutingModule
+    MovimientosPageRoutingModule
   ],
-  declarations: [EnvioPage]
+  declarations: [MovimientosPage]
 })
-export class EnvioPageModule {}
+export class MovimientosPageModule {}

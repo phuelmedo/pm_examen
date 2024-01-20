@@ -5,14 +5,14 @@ import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-cliente',
-  templateUrl: './cliente.page.html',
-  styleUrls: ['./cliente.page.scss'],
+  selector: 'app-movimientos',
+  templateUrl: './movimientos.page.html',
+  styleUrls: ['./movimientos.page.scss'],
 })
-export class ClientePage implements OnInit {
+export class MovimientosPage implements OnInit {
 
-  nombre: string = ""
-  email: string = ""
+  accion: string = ""
+  valor: number = 0;
 
   constructor(private service: AwsApigatewayService, public alert: AlertController, public route: Router) { }
 
@@ -20,12 +20,13 @@ export class ClientePage implements OnInit {
     
   }
 
-  postCliente(){
+  postMovimiento(productoForm: NgForm){
+    const { accion, valor } = productoForm.value;
 
-    this.service.postCliente(this.nombre, this.email).subscribe((data) =>{
-      console.log(this.nombre, this.email)
+    this.service.postMovimiento(this.accion, valor).subscribe((data) =>{
+      console.log(accion, valor)
       console.log(data)
-      this.showAlert("Cliente registrado","Se registro correctamente el cliente " + this.nombre)
+      this.showAlert("Movimiento registrado","Movimiento registrado " + accion)
       this.route.navigateByUrl('/logeado');
     })
   }
